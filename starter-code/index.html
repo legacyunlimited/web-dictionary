@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Dictionary web app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__content container">
+        <div class="header__logo-box">
+          <img src="assets/images/logo.svg" />
+        </div>
+
+        <div class="header__others">
+          <div class="font-styles__box">
+            <select name="fonts" class="font-styles" id="font-styles">
+              <option value="serif">serif</option>
+              <option value="sans">sans</option>
+              <option value="monospace">monospace</option>
+            </select>
+
+            <span class="font-styles__arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+              >
+                <path
+                  fill="none"
+                  stroke="#A445ED"
+                  stroke-width="1.5"
+                  d="m1 1 6 6 6-6"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" id="toggle" class="toggle-theme" />
+            <span class="slider round"></span>
+          </label>
+
+          <img src="assets/images/icon-moon.svg" />
+        </div>
+      </div>
+    </header>
+
+    <form class="search-form">
+      <div class="search-box container">
+        <input
+          type="text"
+          id="word-search"
+          class="word-search"
+          autofocus
+          placeholder="search word here"
+        />
+        <button type="submit" class="btn-search">
+          <img
+            id="search"
+            class="search-icon"
+            src="assets/images/icon-search.svg"
+          />
+        </button>
+      </div>
+    </form>
+
+    <section class="searched-word mt-md">
+      <div class="searched-word__content container">
+        <div class="searched-word__display">
+          <h2 class="word"></h2>
+          <p class="word__pronounce"></p>
+        </div>
+        <div class="play-button-container hide">
+          <button class="play-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="75"
+              height="75"
+              viewBox="0 0 75 75"
+              class="play-button-svg"
+            >
+              <g fill="#A445ED" fill-rule="evenodd">
+                <circle cx="37.5" cy="37.5" r="37.5" opacity=".25" />
+                <path d="M29 27v21l21-10.5z" />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOUN SECTION -->
+    <section class="parts-of-speech"></section>
+
+    <footer class="footer mt-md">
+      <div class="footer__content container source">
+        <h5 class="source__title">Source</h5>
+        <a
+          class="source__link"
+          href="https://api.dictionaryapi.dev"
+          target="_blank"
+          >https://api.dictionaryapi.dev<svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+          >
+            <path
+              fill="none"
+              stroke="#838383"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M6.09 3.545H2.456A1.455 1.455 0 0 0 1 5v6.545A1.455 1.455 0 0 0 2.455 13H9a1.455 1.455 0 0 0 1.455-1.455V7.91m-5.091.727 7.272-7.272m0 0H9m3.636 0V5"
+            /></svg
+        ></a>
+      </div>
+    </footer>
+
+    <div id="word">
+      <h1></h1>
+      <h3></h3>
+      <h4></h4>
+      <h5></h5>
+      <a href="">
+        <h6></h6>
+      </a>
+      <p></p>
+    </div>
+    <label id="data"> </label>
+
+    <script src="app.js"></script>
+  </body>
+</html>

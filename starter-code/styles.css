@@ -1,0 +1,317 @@
+body {
+}
+
+body.dark {
+	background-color: #050505;
+	color: #fff;
+}
+
+form {
+	display: block;
+	text-align: center;
+}
+
+input {
+	background-color: rgba(250, 250, 210, 0.449);
+	width: 25%;
+	height: 40px;
+	border-radius: 10px;
+	border-style: none;
+}
+
+.dark input {
+	caret-color: #a445ed;
+	color: #fff;
+}
+
+.btn-search {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.header__content {
+	display: flex;
+	justify-content: space-between;
+}
+.header__logo-box {
+}
+.header__others {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.font-styles {
+	border-style: none;
+	border-radius: 10px;
+	position: relative;
+	display: inline-block;
+}
+
+/* Hide the default arrow */
+.font-styles {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+	padding-right: 15px;
+}
+.font-styles:focus {
+	outline: none;
+}
+
+/* Custom dropdown arrow styles */
+.font-style__arrow {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	pointer-events: none;
+	transform: translateY(-50%);
+}
+
+/* The SVG element icon for the custom dropdown arrow styles */
+.font-style__arrow svg {
+	width: 14px;
+	height: 14px;
+	fill: purple;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+p {
+	color: red;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+#toggle {
+	background-color: black;
+	color: white;
+}
+
+.search-box {
+	background-color: #88888829;
+	/* max-width: 950px; */
+	/* margin: 0 auto; */
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.word-search {
+	/* background-color: #88888871; */
+	background-color: transparent;
+	width: 100%;
+}
+
+.word-search:focus {
+	outline: none;
+}
+.search-icon {
+	cursor: pointer;
+}
+
+/* SECTION SEARCHED-WORD */
+
+.searched-word {
+}
+
+.searched-word__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.word {
+}
+.word__pronounce {
+	color: #a445ed;
+}
+
+.play-button-container {
+}
+.play-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.play-button-svg {
+	transition: all 0.4s;
+}
+.play-button:hover .play-button-svg path {
+	fill: #fff;
+}
+.play-button:hover .play-button-svg circle {
+	opacity: 1;
+}
+.play-button:active {
+	transform: translateY(5px);
+}
+
+/* PARTS OF SPEECH */
+
+.noun__title {
+}
+
+.title {
+	font-weight: bold;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.verb__meanig-item {
+}
+.verb__meaning-help {
+	display: block;
+	color: #888;
+}
+
+/* FOOTER */
+
+.footer__content {
+	border-top: 1px solid rgba(128, 128, 128, 0.186);
+	padding-top: 10px;
+}
+.source {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.source__link,
+.source__link:link,
+.source__link:active {
+	color: #000;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* styling list */
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 20px;
+}
+
+ul li {
+	position: relative;
+	padding-left: 20px;
+}
+ul li::before {
+	content: '•';
+	position: absolute;
+	left: 0;
+	color: #a445ed;
+	font-size: 18px;
+}
+
+/* UTILITIES */
+
+.hide {
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.muted {
+	color: #888;
+}
+.bar {
+	border-top: 1px solid rgba(128, 128, 128, 0.186);
+	width: 100%;
+}
+
+.container {
+	max-width: 950px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* LAYOUT */
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+.gap-sm {
+	gap: 16px;
+}
+.gap-md {
+	gap: 22px;
+}
+.gap-lg {
+	gap: 32px;
+}
+
+.mt-md {
+	margin-top: 22px;
+}
